@@ -1,5 +1,7 @@
 package OOP2026.Activity1.week1;
 
+import OOP2026.Activity1.week1.week2.Laptop;
+
 public class Main {
     public static void main(String[] args) {
       Laptop laptop1 = new Laptop();

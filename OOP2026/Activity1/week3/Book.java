@@ -1,4 +1,4 @@
-package OOP2026.Activity1.week2;
+package OOP2026.Activity1.week3;
 
 public class Book {
 
