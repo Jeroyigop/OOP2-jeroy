@@ -3,11 +3,10 @@ package OOP2026.practice;
 public class Circle {
 
     double radius;
-    double constantPI = 3.1416;
+    final double constantPI = 3.1416;
 
-    public Circle(double Circleradius, double CircleconstantPI){
+    public Circle(double Circleradius, final double CircleconstantPI){
         radius = Circleradius;
-        constantPI = CircleconstantPI;
             
     }
 
