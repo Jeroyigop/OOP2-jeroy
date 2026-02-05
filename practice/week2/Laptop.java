@@ -1,4 +1,4 @@
-package OOP2026.Activity1.week1;
+package week2;
 
 public class Laptop {
     String brand;

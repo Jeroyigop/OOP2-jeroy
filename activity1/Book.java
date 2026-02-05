@@ -1,4 +1,4 @@
-package OOP2026.Activity1.week3;
+package activity1;
 
 public class Book {
 
@@ -13,16 +13,10 @@ public class Book {
         isbn = Bookisbn;
         publication = Bookpublication;
     }
+
     public void BookInfo() {
         System.out.printf("Title: %s\nAuthor: %s\nISBN: %s\nPublication: %s\n", title, author, isbn, publication);
-        
 
     }
 
 }
-
-
-
-
-
-
