@@ -1,4 +1,4 @@
-package week2;
+package practice.week2;
 
 public class Laptop {
     String brand;

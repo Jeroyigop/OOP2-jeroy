@@ -1,4 +1,4 @@
-package OOP2026.Activity1.week3;
+package practice.week3;
 
 public class MainPro {
     public static void main(String[] args) {
@@ -20,11 +20,9 @@ public class MainPro {
         shop.productList[2] = p3;
         shop.productCount++;
         shop.addProduct(new Product("Water", 20, 100));
-        
 
-        System.out.println("Welcome to " + shop.name );
+        System.out.println("Welcome to " + shop.name);
         shop.displayProducts();
-
 
     }
 }
