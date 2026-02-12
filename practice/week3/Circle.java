@@ -1,4 +1,4 @@
-package practice;
+package practice.week3;
 
 public class Circle {
 
