@@ -23,7 +23,7 @@ public class App {
         System.out.print("Enter PIN: ");
         int pin = sc.nextInt();
 
-        // Find account using stream
+ 
         Optional<BankAccount> newSessionUser = accounts.stream()
                 .filter(account -> account.getAcctNo().equals(acctNo))
                 .findFirst();
@@ -120,13 +120,13 @@ public class App {
     }
 
     public static void loadAccounts(ArrayList<BankAccount> accounts) {
-        // Print working directory to help diagnose missing file issues
+      
         System.out.println("Working directory: " + System.getProperty("user.dir"));
 
         File file = new File("accounts.csv");
         if (!file.exists()) {
             System.out.println("accounts.csv not found at: " + file.getAbsolutePath());
-            // try fallback relative path (when running from project root)
+          
             file = new File("activity4/accounts.csv");
             if (!file.exists()) {
                 System.out.println("accounts.csv not found at fallback: " + file.getAbsolutePath());
@@ -139,7 +139,7 @@ public class App {
 
         try (Scanner reader = new Scanner(file)) {
             if (reader.hasNextLine()) {
-                reader.nextLine(); // skip header
+                reader.nextLine();
             }
 
             int count = 0;

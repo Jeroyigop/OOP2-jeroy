@@ -12,7 +12,7 @@ public class BankAccount {
             this.balance = balance;
     }
 
-    // getters
+
     public String getAcctNo() {
         return acctNo;
     }
@@ -33,7 +33,7 @@ public class BankAccount {
         return fullName;
     }
 
-    // Setters
+
     public void setAcctNo(String acctNo) {
         this.acctNo = acctNo;
     }
