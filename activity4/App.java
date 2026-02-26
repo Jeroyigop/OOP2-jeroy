@@ -170,5 +170,6 @@ public class App {
         } catch (NumberFormatException e) {
             System.out.println("Invalid data format in file.");
         }
+        
     }
 }
