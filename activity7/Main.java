@@ -2,8 +2,8 @@ package activity7;
 
 public class Main {
     public static void main(String[] args) {
-        SmartLight livingRoomLight = new SmartLight("balcon ");
-        SmartThermostat homeThermostat = new SmartThermostat("kalapaw ");
+        SmartLight livingRoomLight = new SmartLight("Bumbilya ");
+        SmartThermostat homeThermostat = new SmartThermostat("Termos ");
 
         livingRoomLight.togglePower();
         livingRoomLight.setBrightness(100);
