@@ -56,8 +56,11 @@ public class MyRectangle2D {
         return 2 * (width + height);
     }
     public boolean contains(double x, double y){
-        return x >= this.x && 
+        return x >= this.x && y >= this.y && x <= this.x + this.width && y <= this.y + this.height;
 
+    }
+    public boolean contains(MyRectangle2D r){
+        return 2
     }
 
 
