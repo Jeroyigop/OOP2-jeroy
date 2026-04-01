@@ -9,21 +9,21 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class FileHandler {
-    private static final String FILE_NAME = "employees.json"; // Save file in root directory
+    private static final String FILE_NAME = "employees.json";
 
     private static Gson getGson() {
-        // Create an adapter for polymorphic deserialization
+    
         RuntimeTypeAdapterFactory<Employee> adapter = RuntimeTypeAdapterFactory.of(Employee.class, "type")
                 .registerSubtype(SalariedEmployee.class, EmployeeType.SALARIED.name())
                 .registerSubtype(HourlyEmployee.class, EmployeeType.HOURLY.name());
 
         return new GsonBuilder()
                 .setPrettyPrinting()
-                .registerTypeAdapterFactory(adapter) // Register the adapter factory
+                .registerTypeAdapterFactory(adapter) 
                 .create();
     }
 
-    // Save employees to a file
+    
     public static void save(ArrayList<Employee> employees) {
         try (Writer writer = new FileWriter(FILE_NAME)) {
             Gson gson = getGson();
@@ -34,7 +34,7 @@ public class FileHandler {
         }
     }
 
-    // Load employees from a file
+   
     public static ArrayList<Employee> load() {
         ArrayList<Employee> loadedEmployees = new ArrayList<>();
         try (Reader reader = new FileReader(FILE_NAME)) {
@@ -43,10 +43,10 @@ public class FileHandler {
             }.getType();
             loadedEmployees = gson.fromJson(reader, listType);
             if (loadedEmployees == null) {
-                loadedEmployees = new ArrayList<>(); // Ensure it's initialized to avoid null
+                loadedEmployees = new ArrayList<>(); 
             }
 
-            // Debugging: Print loaded employees to confirm data
+          
             System.out.println("Loaded Employees: ");
             for (Employee employee : loadedEmployees) {
                 System.out.println(employee);
@@ -55,6 +55,6 @@ public class FileHandler {
         } catch (IOException e) {
             System.out.println("No file found or error loading file. Starting fresh.");
         }
-        return loadedEmployees; // Always return an initialized list
+        return loadedEmployees;
     }
 }
